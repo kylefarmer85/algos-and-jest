@@ -28,8 +28,27 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
-var twoSum = function(nums, target) {
+// var twoSum = function(nums, target) {    
+//     for (let i=0; i < nums.length; i++) {
+//         for (let j=i+1; j < nums.length; j++) {
+//             if (nums[i] + nums[j] === target) {
+//                 return [i,j]
+//             }
+//         }
+//     }
+// };
 
+var twoSum = function(nums, target) {
+  const prevValues = {};
+  for (let i=0; i < nums.length; i++) {
+    const compliment = target - nums[i];
+    const index2 = prevValues[compliment];
+    if (index2 != null) {
+      return [index2, i];
+    } else {
+      prevValues[nums[i]] = i
+    }
+  }
 }
 
 module.exports = twoSum;
