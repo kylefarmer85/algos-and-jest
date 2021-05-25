@@ -1,4 +1,4 @@
-const binarySearch = require('/index');
+const binarySearch = require('./index.js');
 
 test('outputs 5', () => {
   expect(binarySearch([1, 5, 14, 22, 35, 44, 67, 86, 99, 100], 44)).toBe(5);
@@ -18,4 +18,8 @@ test('outputs 8', () => {
 
 test('outputs 4', () => {
   expect(binarySearch([3, 8, 11, 15, 32, 46, 57, 81, 96], 32)).toBe(4);
+});
+
+test('outputs -1', () => {
+  expect(binarySearch([3, 8, 11, 15, 32, 46, 57, 81, 96], 44)).toBe(-1);
 });
