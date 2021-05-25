@@ -40,4 +40,9 @@ function accum(s) {
   return result;
 }
 
+// best solution
+function accum(s) {
+  return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+}
+
 module.exports = accum;
