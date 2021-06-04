@@ -6,8 +6,15 @@
 // uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
-function uniqueInOrder(arr) {
-
+function uniqueInOrder(input) {
+  const splitArr = Array.isArray(input) ? input : input.split("")
+  const uniqueArr = [splitArr[0]];
+  for (let i = 1; i < splitArr.length; i++) {
+    if (splitArr[i-1] && splitArr[i] !== splitArr[i-1]) {
+      uniqueArr.push(splitArr[i])
+    }
+  }
+  return uniqueArr
 }
 
 module.exports = uniqueInOrder;
