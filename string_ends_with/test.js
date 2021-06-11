@@ -15,3 +15,7 @@ test('returns true', () => {
 test('returns false', () => {
   expect(stringEndsWith('abcde', 'abc')).toBe(false);
 });
+
+test('returns true if ending is an empty string', () => {
+  expect(stringEndsWith('abc', '')).toBe(true)
+})

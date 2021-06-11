@@ -5,7 +5,10 @@
 // solution('abc', 'd') // returns false
 
 function stringEndsWith(str, ending) {
-  
+  if (str.slice(-ending.length) === ending || ending === "") {
+    return true
+  }
+  return false
 }
 
 module.exports = stringEndsWith;
