@@ -14,6 +14,9 @@ function uniqueInOrder(input) {
       uniqueArr.push(splitArr[i])
     }
   }
+  if (uniqueArr[0] === undefined) {
+    return []
+  }
   return uniqueArr
 }
 
