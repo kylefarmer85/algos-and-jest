@@ -5,7 +5,14 @@
 // Note: The function accepts an integer and returns an integer
 
 function squareDigits(num) {
-  //may the code be with you
+  const splitStrNums = num.toString().split('');
+  const squaredNums = [];
+
+  for (let n of splitStrNums) {
+    squaredNums.push(n ** 2);
+  }
+
+  return parseInt(squaredNums.join(''));
 }
 
 module.exports = squareDigits;
